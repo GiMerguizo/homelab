@@ -1,7 +1,13 @@
 # Homelab
 > Configurando um Homelab do zero. Tudo que eu tenho é internet, um pc e um sonho. - Merguizo Gi, 2026
 
-## Programas e Recursos
+## Arquitetura do Projeto
+![Desenho da Arquitetura](./docs/arquitetura.png)
+
+## Estrutura de Pastas
+- `/docs`: Documentação e imagens de referência.
+
+## Andamento do Projeto
 - [x] AWS EC2
 - [x] Linux (Ubuntu)
 - [ ] Docker
@@ -10,7 +16,7 @@
 - [ ] Jenkins
 - [ ] Automatizar com Terraform
 
-## Configuração de uma instância EC2
+### Configuração de uma instância EC2
 > Vamos configurar uma máquina Ubuntu _(freetier)_
 
 1. Abrir o EC2 na AWS e executar uma nova instância
