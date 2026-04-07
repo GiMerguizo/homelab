@@ -10,10 +10,10 @@
 ## 🛑 Andamento do Projeto
 - [x] AWS EC2
 - [x] Linux (Ubuntu)
-- [ ] Docker
-- [ ] Grafana
-- [ ] Zabbix
-- [ ] Jenkins
+- [x] Docker
+- [x] Grafana
+- [x] Zabbix
+- [x] Jenkins
 - [ ] Automatizar com Terraform
 
 ### 🐧 Configuração de uma instância EC2
@@ -37,7 +37,7 @@
 
 ### 🛠️ Docker compose
 O docker compose contém as configurações necessárias para a implementação do **zabbix**, **grafana** e **prometheus** rodando em docker.
-- Configuração: PostgresDB, Nginx, Zabbix 7.0, Grafana e Prometheus
+- Configuração: PostgresDB, Nginx, Zabbix 7.0, Grafana, Prometheus e Jenkins
 - Rodando:
 ```bash
 docker compose up -d 
@@ -58,6 +58,7 @@ docker compose up -d
 ```
 
 #### 🚪 Portas
+- **Jenkins:** [http://localhost:8080](http://localhost:8080)
 - **Zabbix:** [http://localhost:80](http://localhost:8080)
 - **Prometheus:** [http://localhost:9090](http://localhost:9090)
 - **Grafana:** [http://localhost:3000](http://localhost:3000)
@@ -72,3 +73,4 @@ docker compose up -d
 - [Monitoramento do Jenkins com Grafana + Prometheus](https://github.com/GiMerguizo/integracao-jenkins-grafana)
 - [Desafio Técnico - Cubos DevOps](https://github.com/GiMerguizo/desafio-tecnico-cubos-devops/tree/main)
 - [Monitoração Zabbix + Grafana](https://github.com/GiMerguizo/monitoramento-zabbix-grafana)
+- [Integração Jenkins + Grafana](https://github.com/GiMerguizo/integracao-jenkins-grafana)

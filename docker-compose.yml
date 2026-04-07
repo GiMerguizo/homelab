@@ -97,9 +97,11 @@ services:
     environment:
       GF_SECURITY_ADMIN_USER: ${GF_SECURITY_ADMIN_USER}
       GF_SECURITY_ADMIN_PASSWORD: ${GF_SECURITY_ADMIN_PASSWORD}
+      GF_INSTALL_PLUGINS: alexanderzobnin-zabbix-app
     volumes:
       - grafana_data:/var/lib/grafana
       - ./grafana_config/grafana.ini:/etc/grafana/grafana.ini
+      - ./grafana_config/provisioning:/etc/grafana/provisioning
     ports:
       - "3000:3000"
     networks:
@@ -121,11 +123,24 @@ services:
     ports:
       - "9090:9090"
     networks:
+      - zabbix-network
+
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins
+    restart: always
+    volumes:
+      - jenkins_data:/var/jenkins_home
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    networks:
       - default
 
 volumes:
   zbx_db_data:
   grafana_data:
+  jenkins_data:
 
 networks:
   zabbix-network:
